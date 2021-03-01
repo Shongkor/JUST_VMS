@@ -1,0 +1,258 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- FONT AWESOME CDN LINK-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- BOOTSTRAP LINK-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- CSS LINK-->
+    <link rel="stylesheet" href="scss/style.css">
+
+    <title> JUST VMS </title>
+    <link rel="shortcut icon" type="image/png" href="img/just2.png">
+
+    <script type="text/javascript" src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/popup.js" async=""></script>
+    <script type="text/javascript" src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/tat_popup.js" async="">
+    </script>
+</head>
+
+<body id="body" data-new-gr-c-s-check-loaded="14.995.0" data-gr-ext-installed="" style="">
+    <!--First Section-->
+    <section id="First_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo_box text-center ">
+                        <img src="img/just2.png" alt="logo">
+                        <!-- <i class=" globe fa fa-globe"></i> -->
+                    </div>
+                </div>
+
+                <div class="col-md-10 ">
+
+                    <h1>JUST VEHICLE MANAGEMENT SYSTEM</h1>
+                    <h2>JASHORE UNIVERSITY OF SCIENCE AND TECHNOLOGY</h2>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!--nav item-->
+                    <nav class="navbar navbar-expand-lg">
+
+                        <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse"
+                            data-target="#myNavbar">
+                            <span>
+                                <i class="text-light fa fa-bars"></i>
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse " id="myNavbar">
+                            <ul class="navbar-nav  first_nav_item ">
+                                <li class="nav-item"><a class="nav-link  text-light" href="index.php"> Home</a></li>
+                                <li class="nav-item"><a class="nav-link  text-light" href="notice_posts.php">Notice</a>
+                                </li>
+
+
+
+                                <li class="nav-item"><a class="nav-link text-light" href="allusers.php">Users</a></li>
+                                <li class="nav-item sinsm"><a class="nav-link text-light" href="allcosts.php">Costs</a>
+                                </li>
+                                <li class="nav-item sinsm"><a class="nav-link text-light"
+                                        href="requisition_request.php">All request</a></li>
+                                <li class="nav-item"><a class="nav-link  text-light"
+                                        href="forward_request.php">Forwarded</a></li>
+                                <li class="nav-item"><a class="nav-link text-light"
+                                        href="requisition_form.php">Requistion Form</a></li>
+                                <li class="nav-item"><a class="nav-link text-light"
+                                        href="requisition_result.php">Messages</a></li>
+                                <li class="nav-item sinsm"><a class="nav-link text-light" href="mycost.php">MyCost</a>
+                                </li>
+
+
+                                <li onmouseout="hidePostDropDown()" onmouseover="showPostDropDown()" class="nav-item"><a
+                                        class="nav-link  text-light" href="JavaScript:Void(0);"> Post</a>
+
+                                    <div id="post_dropdown_div">
+                                        <a href="add_post.php">Create new post</a>
+                                        <a href="post_manages.php">Manage all post</a>
+
+                                    </div>
+
+                                </li>
+                                <li onmouseout="hideVehicleDropDown()" onmouseover="showVehicleDropDown()"
+                                    class="nav-item"><a class="nav-link  text-light" href="JavaScript:Void(0);">
+                                        Vehicle</a>
+
+                                    <div id="vehicle_dropdown_div">
+                                        <a href="add_bus.php">Add new vehicle</a>
+                                        <a href="bus_manages.php">Manage all vehicle</a>
+
+                                    </div>
+
+                                </li>
+                                <li onmouseout="hideDriverDropDown()" onmouseover="showDriverDropDown()"
+                                    class="nav-item"><a class="nav-link  text-light" href="JavaScript:Void(0);">
+                                        Driver</a>
+
+                                    <div id="driver_dropdown_div">
+                                        <a href="add_driver.php">Add new Driver</a>
+                                        <a href="driver_manages.php">Manage all Driver</a>
+
+                                    </div>
+
+                                </li>
+
+                                <li class="nav-item"><a class="nav-link text-light"
+                                        href="logout_core.php?logout">Logout</a></li>
+
+
+                            </ul>
+                        </div>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <!-- Name show -->
+            <div class="row">
+                <div class="col">
+                    <div class="user_profile">
+                        <a href="profile.php"> <i class="fa fa-user"></i> Mr Admin</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <section id="Add_vehicle_section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="title"> <i class="fa fa-pencil"></i> Add new vehicle </h2>
+                    <hr>
+                </div>
+            </div>
+            <form action="add_bus_core.php" method="POST">
+                <div class="row">
+                    <div class="col">
+                        <div class="from-group">
+                            <label for="Vehicle id" class="font-weight-bold">Vehicle id</label>
+                            <input type="text" name="bus_id" class="form-control" required="1" placeholder="Vehicle Id">
+                        </div>
+                        <div class="from-group">
+                            <label for="title" class="font-weight-bold">Vehicle name</label>
+                            <input type="text" name="bus_name" required="1" class="form-control"
+                                placeholder="Vehicle Name">
+                        </div>
+                        <div class="from-group">
+                            <label for="title" class="font-weight-bold">Select vehicle type</label>
+                            <select name="bus_type" class="form-control" required="1">
+                                <option value="-1">Vehicle Type </option>
+                                <option value="Ambulance">Ambulance</option>
+                                <option value="Micro-Bus">Micro-Bus</option>
+                                <option value="Pick-Up">Pick-Up</option>
+                                <option value="AC-Minibus">AC-Minibus</option>
+                                <option value="Non-AC Minibus">Non-AC Minibus</option>
+                                <option value="Single Deck Bus">Single Deck Bus</option>
+                                <option value="Double Deck Bus">Double Deck Bus</option>
+
+
+                            </select>
+                        </div>
+                        <input type="submit" name="add_submit" class="form-control btn btn-primary my-3"
+                            value="Add Vehicle">
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function showPostDropDown() {
+            document.getElementById("post_dropdown_div").style.display = 'block';
+        }
+
+        function hidePostDropDown() {
+            document.getElementById("post_dropdown_div").style.display = 'none';
+        }
+
+
+        function showVehicleDropDown() {
+            document.getElementById("vehicle_dropdown_div").style.display = 'block';
+        }
+
+        function hideVehicleDropDown() {
+            document.getElementById("vehicle_dropdown_div").style.display = 'none';
+        }
+
+        function showDriverDropDown() {
+            document.getElementById("driver_dropdown_div").style.display = 'block';
+        }
+
+        function hideDriverDropDown() {
+            document.getElementById("driver_dropdown_div").style.display = 'none';
+        }
+    </script>
+
+
+
+    <!--Link-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+
+    <!--counter link-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 2000
+            });
+        });
+    </script>
+
+    <!--*****************************************************-->
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+
+
+
+
+
+</body>
+
+</html>
